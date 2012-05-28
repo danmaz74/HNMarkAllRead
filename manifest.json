@@ -1,0 +1,21 @@
+{
+  "name": "Hacker News: Mark All Read",
+  "version": "1.1",
+  "manifest_version": 2,
+  "description": "Mark news you already scanned as read on HN",
+  "content_scripts": [
+    {
+      "matches": ["*://news.ycombinator.com/*"],
+      "css": ["styles.css"],
+      "js": ["jquery.min.js", "script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    "images/HNMarkAllRead-18.png",
+    "styles.css"
+  ]
+//  ,
+//  "icons": {
+//    "128": "images/HNMarkAllRead.png"
+//  }
+}

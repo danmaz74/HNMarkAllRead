@@ -1,0 +1,21 @@
+.mark_all_read img {
+    border: 1px solid white;
+    position: relative;
+    top: 2px;
+}
+
+.mark_all_read img:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 9px black;
+}
+
+#hide_span {
+    position: relative;
+    top: -4px;
+    font-size: 10px;
+}
+
+.near_more {
+    position: relative;
+    top: 2px;
+}
