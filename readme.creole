@@ -2,7 +2,7 @@
 
 This is the source code for the Chrome extension [[https://chrome.google.com/webstore/detail/ogfbcfkihdkplelnaenpgkhnkpoaggjc|Hacker News: Mark All Read]]
 
-=== Mark as read the news you already
+=== Save Time on Hacker News: Mark All Read
 
 I created this extension out of my own frustration: I was bored at having to always scan the whole list of news on the HN home page to find
 which one were actually new. I got a lot from the community, so I decided to take the time to polish the project a little and share it with
