@@ -8,6 +8,8 @@ I created this extension out of my own frustration: I was bored at having to alw
 which one were actually new. I got a lot from the community, so I decided to take the time to polish the project a little and share it with
 everybody else who will find it useful. Enjoy!
 
+{{http://blog.hashtagify.me/wp-content/uploads/2012/05/HNMarkAllRead_screenshot1-e1338119577936-1024x211.png}}
+
 === Open Source
 
 I want to keep the feature list little and clean, but you are free to make any changes you wish. Just, please, create your own artwork
