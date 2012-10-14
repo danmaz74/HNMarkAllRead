@@ -1,8 +1,8 @@
 {
   "name": "Hacker News: Mark All Read",
-  "version": "1.1",
+  "version": "1.3",
   "manifest_version": 2,
-  "description": "Mark news you already scanned as read on HN",
+  "description": "Save time on HN by marking read the titles and comments you already scanned. And more.",
   "content_scripts": [
     {
       "matches": ["*://news.ycombinator.com/*"],
