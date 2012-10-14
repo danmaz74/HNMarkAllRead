@@ -10,9 +10,14 @@ everybody else who will find it useful. Enjoy!
 
 {{http://blog.hashtagify.me/wp-content/uploads/2012/05/HNMarkAllRead_screenshot1-e1338119577936-1024x211.png}}
 
+=== More Features
+
+Version 1.3 adds many new features that are described here: [[http://danmaz74.me/|Blog announcement]]
+
 === Open Source
 
-I want to keep the feature list little and clean, but you are free to make any changes you wish. Just, please, create your own artwork
+I find most convenient to have this as a Chrome extension, but if you want to repack it for any other browser
+you're free to do so. Just, please, create your own artwork
 for the button and icons if you want to publish an extension of your own.
 
 If you find any bugs, or improve the core functionality, you're very welcome to send me a pull request.
