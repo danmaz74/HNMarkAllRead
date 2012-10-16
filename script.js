@@ -91,7 +91,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
     // add the controls only in news listing pages
     if (titles > 29) {
         $($(".pagetop")[0]).append("&nbsp; <span class='mark_all_read' title='Mark all read'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></span>"+
-            "<span id='hide_span' class='hide_news_span'><input type='checkbox' id='hide_read_items' />Hide read</span>");
+            "<span id='hide_span' class='hide_news_span'><input type='checkbox' id='hide_read_items' /><label for='hide_read_items'>Hide read</label></span>");
         if (localStorage["hide_marked_urls"] == 'true') $("#hide_read_items").attr("checked", true);
 
         if (more_td) more_td.append("&nbsp; <span class='mark_all_read near_more' title='Mark all read'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></span>");
@@ -155,7 +155,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
     var comments_counter = $($(".subtext").children("a")[2]);
 
     $($(".subtext")[0]).append("&nbsp; <span class='mark_all_read' title='Mark all comments read'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></span>"+
-            "<span id='hide_span' class='hide_comments_span'><input type='checkbox' id='hide_read_items' />Hide read comments</span>");
+            "<span id='hide_span' class='hide_comments_span'><input type='checkbox' id='hide_read_items' /><label for='hide_read_items'>Hide read comments</label></span>");
 
     $("<tr><td id='post_comments_tr'></td></tr>").insertAfter($($("table")[0].childNodes[0].childNodes[2]));
     $(".mark_all_read").clone().appendTo($("#post_comments_tr"));
