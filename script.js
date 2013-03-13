@@ -179,7 +179,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
     for (i=0;i<ii.length;i++) {
         var n = ii[i];
         try {
-            if (n.parentNode.tagName =='TD' && n.src == 'http://ycombinator.com/images/s.gif' && n.parentNode && n.parentNode.nextSibling) {
+            if (n.parentNode.tagName =='TD' && /\/s.gif$/.test(n.src) && n.parentNode && n.parentNode.nextSibling) {
                 comments_total++;
                 var node = n.parentNode.nextSibling.nextSibling; // the comment td
 
