@@ -44,7 +44,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
     // check which pieces of news have already been marked read and change their color
     $(".subtext").each(function(i,sub) {
-        var mainlink = $(sub.parentNode.previousSibling.childNodes[2].childNodes[0]);
+        var mainlink = $(sub.parentNode.previousSibling.childNodes[2].childNodes[1]);
 
         titles++;
 
@@ -387,5 +387,3 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
         }
     }
 }
-
-
