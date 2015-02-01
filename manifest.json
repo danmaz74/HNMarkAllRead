@@ -10,12 +10,11 @@
       "js": ["jquery.min.js", "script.js"]
     }
   ],
+  "icons": {
+     "128": "images/HNMarkAllRead.png"
+  },
   "web_accessible_resources": [
     "images/HNMarkAllRead-18.png",
     "styles.css"
   ]
-//  ,
-//  "icons": {
-//    "128": "images/HNMarkAllRead.png"
-//  }
 }
