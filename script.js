@@ -44,7 +44,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
     // check which pieces of news have already been marked read and change their color
     $(".subtext").each(function(i,sub) {
-        var mainlink = $(sub.parentNode.previousSibling.childNodes[2].childNodes[0]);
+        var mainlink = $(sub.parentNode.previousSibling.childNodes[2].childNodes[1]); // fixed after HN change jan/2015
 
         titles++;
 
@@ -97,8 +97,9 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
         if (more_td) more_td.append("&nbsp; <span class='mark_all_read near_more' title='Mark all read'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></span>");
 
         $(".mark_all_read").click(function(){
-            $(".title").each(function(i,el) {
-                var mainlink = $($(el).children("a")[0]);
+            $(".subtext").each(function(i,sub) {
+            var mainlink = $(sub.parentNode.previousSibling.childNodes[2].childNodes[1]); // fixed after HN change jan/2015
+
 
                 // add the link to the "read" ones
                 if (!marked_read_urls[mainlink.attr("href")]) {
@@ -387,5 +388,3 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
         }
     }
 }
-
-
