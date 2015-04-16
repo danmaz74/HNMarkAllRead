@@ -44,7 +44,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
     // check which pieces of news have already been marked read and change their color
     $(".subtext").each(function(i,sub) {
-        var mainlink = $(sub.parentNode.previousSibling.childNodes[2].childNodes[1]); // fixed after HN change jan/2015
+        var mainlink = $(sub.parentNode.previousElementSibling.childNodes[5].childNodes[1]); // fixed after HN change April 15, 2015
 
         titles++;
 
@@ -52,7 +52,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
         // check if following
         var following = false;
-        var comments_a = sub.childNodes[6];
+        var comments_a = sub.childNodes[9];
 
         if (comments_a) { // if a real news item, and not just a yc announcement
             var item_id = comments_a.href.match(/[0-9]+/)[0];
@@ -86,7 +86,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
     });
 
     more_td = $(".title").last();
-    if (more_td.text() != "More") more_td = null;
+    if (more_td.text().trim() != "More") more_td = null;  // fixed after HN change April 15, 2015
 
     // add the controls only in news listing pages
     if (titles > 29) {
@@ -98,7 +98,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
         $(".mark_all_read").click(function(){
             $(".subtext").each(function(i,sub) {
-            var mainlink = $(sub.parentNode.previousSibling.childNodes[2].childNodes[1]); // fixed after HN change jan/2015
+            var mainlink = $(sub.parentNode.previousElementSibling.childNodes[5].childNodes[1]); // fixed after HN change April 15, 2015
 
 
                 // add the link to the "read" ones
