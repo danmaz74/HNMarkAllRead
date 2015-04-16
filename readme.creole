@@ -6,6 +6,8 @@ This will be deleted when the author fixes the official extension, so use only i
 
 The TEMPORARY extension is available at the [[https://chrome.google.com/webstore/detail/hacker-news-mark-all-read/fghfahcbhpdeeaaofcefaoodmfejieok?hl=en|Chrome Web Store]]. This is not visible at the Web Store, to avoid confusion with the official (yet broken) extension.
 
+Fixed on April 15, 2015.
+
 Original Readme below.
 
 ---
