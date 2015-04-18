@@ -1,8 +1,8 @@
 {
-  "name": "Hacker News: Mark All Read (FIXED)",
-  "version": "1.42",
+  "name": "Hacker News: Mark All Read v1.43",
+  "version": "1.43",
   "manifest_version": 2,
-  "description": "Save time on HN by marking read the titles and comments you already scanned. And more. -- Fixed on April 15, 2015",
+  "description": "Save time on HN by marking read the titles and comments you already scanned. And more.",
   "content_scripts": [
     {
       "matches": ["*://news.ycombinator.com/*"],

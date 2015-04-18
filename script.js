@@ -44,7 +44,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
     // check which pieces of news have already been marked read and change their color
     $(".subtext").each(function(i,sub) {
-        var mainlink = $(sub.parentNode.previousElementSibling.childNodes[5].childNodes[1]); // fixed after HN change April 15, 2015
+        var mainlink = $(sub.parentNode.previousElementSibling.childNodes[4].childNodes[1]); // fixed after HN change April 17, 2015
 
         titles++;
 
@@ -98,7 +98,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
         $(".mark_all_read").click(function(){
             $(".subtext").each(function(i,sub) {
-            var mainlink = $(sub.parentNode.previousElementSibling.childNodes[5].childNodes[1]); // fixed after HN change April 15, 2015
+            var mainlink = $(sub.parentNode.previousElementSibling.childNodes[4].childNodes[1]); // fixed after HN change April 17, 2015
 
 
                 // add the link to the "read" ones
