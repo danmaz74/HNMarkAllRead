@@ -90,11 +90,11 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
     // add the controls only in news listing pages
     if (titles > 29) {
-        $($(".pagetop")[0]).append("&nbsp; <span class='mark_all_read' title='Mark all read'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></span>"+
+        $($(".pagetop")[0]).append("&nbsp; <span class='mark_all_read' title='Mark all read'><a href='javascript:void(0);'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></a></span>"+
             "<span id='hide_span' class='hide_news_span'><input type='checkbox' id='hide_read_items' /><label for='hide_read_items'>Hide read</label></span>");
         if (localStorage["hide_marked_urls"] == 'true') $("#hide_read_items").attr("checked", true);
 
-        if (more_td) more_td.append("&nbsp; <span class='mark_all_read near_more' title='Mark all read'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></span>");
+        if (more_td) more_td.append("&nbsp; <span class='mark_all_read near_more' title='Mark all read'><a href='javascript:void(0);'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></a></span>");
 
         $(".mark_all_read").click(function(){
             $(".subtext").each(function(i,sub) {
