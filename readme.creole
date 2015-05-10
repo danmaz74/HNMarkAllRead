@@ -1,5 +1,19 @@
 == Hacker News: Mark All Read
 
+This is the REVISED AND TEMPORARY VERSION of the popular *Hacker News: Mark All Read* Chrome extension.
+
+This will be deleted when the author fixes the official extension, so use only if the lack of Mark All Read functionality is driving you crazy :)
+
+The TEMPORARY extension is available at the [[https://chrome.google.com/webstore/detail/hacker-news-mark-all-read/fghfahcbhpdeeaaofcefaoodmfejieok?hl=en|Chrome Web Store]]. This is not visible at the Web Store, to avoid confusion with the official (yet broken) extension.
+
+Fixed on April 15, 2015.
+
+Original Readme below.
+
+---
+
+== Hacker News: Mark All Read
+
 This is the source code for the Chrome extension [[https://chrome.google.com/webstore/detail/ogfbcfkihdkplelnaenpgkhnkpoaggjc|Hacker News: Mark All Read]]
 
 === Saving Time on Hacker News

@@ -44,7 +44,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
     // check which pieces of news have already been marked read and change their color
     $(".subtext").each(function(i,sub) {
-        var mainlink = $(sub.parentNode.previousSibling.childNodes[2].childNodes[0]);
+        var mainlink = $(sub.parentNode.previousElementSibling.childNodes[4].childNodes[1]); // fixed after HN change April 17, 2015
 
         titles++;
 
@@ -52,7 +52,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
         // check if following
         var following = false;
-        var comments_a = sub.childNodes[6];
+        var comments_a = sub.childNodes[9];
 
         if (comments_a) { // if a real news item, and not just a yc announcement
             var item_id = comments_a.href.match(/[0-9]+/)[0];
@@ -86,19 +86,20 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
     });
 
     more_td = $(".title").last();
-    if (more_td.text() != "More") more_td = null;
+    if (more_td.text().trim() != "More") more_td = null;  // fixed after HN change April 15, 2015
 
     // add the controls only in news listing pages
     if (titles > 29) {
-        $($(".pagetop")[0]).append("&nbsp; <span class='mark_all_read' title='Mark all read'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></span>"+
+        $($(".pagetop")[0]).append("&nbsp; <span class='mark_all_read' title='Mark all read'><a href='javascript:void(0);'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></a></span>"+
             "<span id='hide_span' class='hide_news_span'><input type='checkbox' id='hide_read_items' /><label for='hide_read_items'>Hide read</label></span>");
         if (localStorage["hide_marked_urls"] == 'true') $("#hide_read_items").attr("checked", true);
 
-        if (more_td) more_td.append("&nbsp; <span class='mark_all_read near_more' title='Mark all read'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></span>");
+        if (more_td) more_td.append("&nbsp; <span class='mark_all_read near_more' title='Mark all read'><a href='javascript:void(0);'><img src='"+chrome.extension.getURL("/images/HNMarkAllRead-18.png")+"'></img></a></span>");
 
         $(".mark_all_read").click(function(){
-            $(".title").each(function(i,el) {
-                var mainlink = $($(el).children("a")[0]);
+            $(".subtext").each(function(i,sub) {
+            var mainlink = $(sub.parentNode.previousElementSibling.childNodes[4].childNodes[1]); // fixed after HN change April 17, 2015
+
 
                 // add the link to the "read" ones
                 if (!marked_read_urls[mainlink.attr("href")]) {
@@ -387,5 +388,3 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
         }
     }
 }
-
-

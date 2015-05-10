@@ -1,6 +1,6 @@
 {
-  "name": "Hacker News: Mark All Read",
-  "version": "1.4",
+  "name": "Hacker News: Mark All Read v1.43",
+  "version": "1.43",
   "manifest_version": 2,
   "description": "Save time on HN by marking read the titles and comments you already scanned. And more.",
   "content_scripts": [
@@ -10,12 +10,11 @@
       "js": ["jquery.min.js", "script.js"]
     }
   ],
+  "icons": {
+     "128": "images/HNMarkAllRead.png"
+  },
   "web_accessible_resources": [
     "images/HNMarkAllRead-18.png",
     "styles.css"
   ]
-//  ,
-//  "icons": {
-//    "128": "images/HNMarkAllRead.png"
-//  }
 }
