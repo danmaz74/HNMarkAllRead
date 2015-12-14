@@ -185,7 +185,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
                 var node = n.parentNode.nextSibling.nextSibling; // the comment td
 
                 // read/unread comments management
-                var comment_id = node.childNodes[0].childNodes[0].childNodes[2].href.match(/[0-9]+/)[0];
+                var comment_id = node.childNodes[0].childNodes[0].childNodes[3].href.match(/[0-9]+/)[0];
 
                 var tr = node.parentNode.parentNode.parentNode.parentNode.parentNode;
 
