@@ -261,7 +261,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
             sel.removeClass("unread_comment_td").addClass("read_comment_td");
 
-            var tr = $(el.parentNode.parentNode.parentNode.parentNode.parentNode);
+            var tr = $(".comment_tr_"+comment_id)
 
             tr.removeClass("unread_comment_tr").addClass("read_comment_tr");
 
