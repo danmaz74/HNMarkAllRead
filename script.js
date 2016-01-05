@@ -177,18 +177,17 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
     var sheet = document.styleSheets[document.styleSheets.length-1];
 
-    for (i=0;i<ii.length;i++) {
-        var n = ii[i];
-        try {
-            if (n.parentNode.tagName =='TD' && /\/s.gif$/.test(n.src) && n.parentNode && n.parentNode.nextSibling) {
+    // iterate over each comment entry
+    $("tr.athing").has('span.age').each(
+        function(i,tr) {
+            try {
+                var indentation = $('td.ind img', tr)[0].width;
+                var comment_id = $('span.age a', tr)[0].href.match(/[0-9]+/)[0];
+                var node = $('> td', tr)[0]; // "node" is the sole td child of the tr.
+
                 comments_total++;
-                var node = n.parentNode.nextSibling.nextSibling; // the comment td
 
                 // read/unread comments management
-                var comment_id = node.childNodes[0].childNodes[0].childNodes[2].href.match(/[0-9]+/)[0];
-
-                var tr = node.parentNode.parentNode.parentNode.parentNode.parentNode;
-
                 $(tr).data("comment_id", comment_id).addClass("comment_tr_"+comment_id);
                 $(node).data("comment_id", comment_id).addClass("comment_td_"+comment_id);
 
@@ -204,7 +203,7 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
                 }
 
                 // nesting management
-                var depth = n.width/40;
+                var depth = indentation/40;
                 if (depth > last_depth) {
                     parents.push(last_node);
                     first_child = true;
@@ -246,11 +245,11 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
 
                 last_node = node;
                 last_depth = depth;
+            } catch(e) {
+                console.log(e);
             }
-        } catch(e) {
-            console.log(e);
         }
-    }
+    );
 
     $(".mark_all_read").click(function(){
         $(".unread_comment_td").each(function(i,el) {
