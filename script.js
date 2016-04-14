@@ -219,7 +219,8 @@ if (!window.location.href.match(/\/item\?/)) { // ignore if displaying a news it
                 if (parents.length > 0) {
                     var parent = parents[parents.length-1];
 
-                    $("<span"+(first_child ? " class='showparent_firstchild'" : "")+"> | <span class='showparent'>show parent</span></span>").appendTo($($(node).children()[0]).children(".comhead")).
+                    $("<span"+(first_child ? " class='showparent_firstchild'" : "")+"> | <span class='showparent'>show parent</span></span>").
+                        appendTo($(node).find('span.comhead').get(0)).
                         children(".showparent").
                         hover(
                         (function(parent, node){ return function() {
